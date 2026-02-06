@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knew you would say yes!</title>
+    <link rel="stylesheet" href="./yes_style.css">
+   
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="header_text">What Happened After Your Yes</h1>
+        <h2 id="yearDisplay">2021💖</h2>
+        <div >
+            <video id="myVideo"  autoplay height="500" width="400">
+                <source src="v11.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+    </div>
+     <script>
+  
+  const video = document.getElementById('myVideo');
+
+  
+  video.onended = function() {
+    window.location.href = "http://127.0.0.1:5500/be%20my%20Valentine/be%20my%20Valentine/index2.html";
+  };
+
+
+
+  const yearElement = document.getElementById("yearDisplay");
+  let currentYear = 2021;
+  const targetYear = 2025;
+
+  const yearInterval = setInterval(() => {
+    if (currentYear < targetYear) {
+      currentYear++;
+      yearElement.textContent = currentYear;
+    } else {
+      // Stops the timer once 2025 is reached
+      clearInterval(yearInterval);
+      console.log("Reached 2025");
+    }
+  }, 2500); // 2000 milliseconds = 2 seconds
+</script>
+</body>
+</html>
